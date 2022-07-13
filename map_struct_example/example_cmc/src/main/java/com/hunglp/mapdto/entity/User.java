@@ -24,6 +24,9 @@ public class User {
     @Column(name = "permission")
     private Set<Permission> permissions;
 
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
+
 
 
 

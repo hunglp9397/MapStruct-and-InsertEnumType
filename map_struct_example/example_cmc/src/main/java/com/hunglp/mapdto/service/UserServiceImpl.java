@@ -23,4 +23,9 @@ public class UserServiceImpl implements UserService {
     public Page<UserDto> getAllUser(Pageable pageable) {
         return userRepository.findAll(pageable).map(userMapper::toDto);
     }
+
+    @Override
+    public void saveUser(UserDto userDto) {
+        userRepository.save(userMapper.toEntity(userDto));
+    }
 }

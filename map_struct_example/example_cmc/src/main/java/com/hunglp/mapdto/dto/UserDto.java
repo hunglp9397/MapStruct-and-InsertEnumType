@@ -1,6 +1,7 @@
 package com.hunglp.mapdto.dto;
 
 
+import com.hunglp.mapdto.entity.Gender;
 import com.hunglp.mapdto.entity.Permission;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,4 +20,5 @@ public class UserDto implements Serializable {
     private Long id;
     private String name;
     private Set<Permission> permissions;
+    private Gender gender;
 }
