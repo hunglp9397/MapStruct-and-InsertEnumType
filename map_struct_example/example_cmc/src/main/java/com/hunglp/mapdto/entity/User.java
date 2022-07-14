@@ -23,8 +23,6 @@ public class User {
     @Enumerated(EnumType.STRING)
     @Column(name = "permission")
     private Set<Permission> permissions;
-
-    @Enumerated(EnumType.STRING)
     private Gender gender;
 
 
