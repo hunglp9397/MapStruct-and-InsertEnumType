@@ -1,5 +1,7 @@
 package com.hunglp.mapdto.entity;
 
+import com.hunglp.mapdto.converter.GenderEnumConverter;
+import com.hunglp.mapdto.converter.PermissionEnumConverter;
 import com.hunglp.mapdto.dto.UserDto;
 import lombok.*;
 
@@ -18,12 +20,20 @@ public class User {
 
     private String name;
 
-    @ElementCollection(targetClass = Permission.class)
+
+    @Convert(converter = GenderEnumConverter.class)
+    private Gender gender;
+
+    @ElementCollection(targetClass = Permission.class, fetch = FetchType.EAGER)
     @JoinTable(name = "user_permission", joinColumns  = @JoinColumn(name = "id"))
-    @Enumerated(EnumType.STRING)
+    @Convert(converter = PermissionEnumConverter.class)
     @Column(name = "permission")
     private Set<Permission> permissions;
-    private Gender gender;
+
+
+//    @Convert(converter = PermissionEnumConverter.class)
+//    private Permission permission;
+
 
 
 

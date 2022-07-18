@@ -20,5 +20,6 @@ public class UserDto implements Serializable {
     private Long id;
     private String name;
     private Set<Permission> permissions;
+//    private Permission permission;
     private Gender gender;
 }
