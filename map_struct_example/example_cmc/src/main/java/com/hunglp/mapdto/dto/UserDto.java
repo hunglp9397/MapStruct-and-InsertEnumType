@@ -1,6 +1,7 @@
 package com.hunglp.mapdto.dto;
 
 
+import com.hunglp.mapdto.entity.AbstractEntity;
 import com.hunglp.mapdto.entity.Gender;
 import com.hunglp.mapdto.entity.Permission;
 import lombok.AllArgsConstructor;
@@ -16,7 +17,7 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserDto implements Serializable {
+public class UserDto extends AbstractEntity implements Serializable {
     private Long id;
     private String name;
     private Set<Permission> permissions;

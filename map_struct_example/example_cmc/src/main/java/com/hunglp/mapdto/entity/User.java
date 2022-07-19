@@ -12,7 +12,7 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class User extends AbstractEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
