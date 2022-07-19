@@ -4,8 +4,10 @@
 
 
 JSON example for POST:
-#{
-#    "name" : "ABC",
-#    "permissions":["READ","WRITE"],
-#    "gender":"MALE"
-#}
+#
+{
+    "name" : "ABC",
+    "permissions":["READ","WRITE"],
+    "gender":"MALE"
+}
+#
