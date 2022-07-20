@@ -35,6 +35,9 @@ public class User extends AbstractEntity{
 //    private Permission permission;
 
 
+    @OneToOne(mappedBy = "user")
+    private Identity identity;
+
 
 
 

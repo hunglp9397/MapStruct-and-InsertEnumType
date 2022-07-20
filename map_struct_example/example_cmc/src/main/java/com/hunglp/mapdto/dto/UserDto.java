@@ -3,6 +3,7 @@ package com.hunglp.mapdto.dto;
 
 import com.hunglp.mapdto.entity.AbstractEntity;
 import com.hunglp.mapdto.entity.Gender;
+import com.hunglp.mapdto.entity.Identity;
 import com.hunglp.mapdto.entity.Permission;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,4 +24,5 @@ public class UserDto extends AbstractEntity implements Serializable {
     private Set<Permission> permissions;
 //    private Permission permission;
     private Gender gender;
+    private IdentityDto identityDto;
 }

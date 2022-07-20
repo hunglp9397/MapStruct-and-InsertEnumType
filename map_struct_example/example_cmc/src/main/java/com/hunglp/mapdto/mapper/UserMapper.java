@@ -7,7 +7,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring",uses = IdentityMapper.class)
 public interface UserMapper extends GenericMapper<UserDto, User> {
 
     @AfterMapping
