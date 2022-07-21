@@ -11,3 +11,8 @@ JSON example for POST:
     "gender":"MALE"
 }
 #
+
+# One to One:
+Save : set child reference in parent entity
+Set parent referene in child entity
+
