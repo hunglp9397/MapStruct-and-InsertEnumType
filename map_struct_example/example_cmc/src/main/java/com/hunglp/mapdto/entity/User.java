@@ -6,13 +6,14 @@ import com.hunglp.mapdto.dto.UserDto;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User extends AbstractEntity{
+public class User{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -35,15 +36,8 @@ public class User extends AbstractEntity{
 //    private Permission permission;
 
 
-    @OneToOne(mappedBy = "user")
+    @OneToOne(mappedBy = "user", cascade = CascadeType.PERSIST)
     private Identity identity;
-
-    @OneToMany(mappedBy="user")
-    private Set<Order> orders = new HashSet<>();
-
-
-
-
 
 
 }

@@ -18,7 +18,7 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserDto extends AbstractEntity implements Serializable {
+public class UserDto implements Serializable {
     private Long id;
     private String name;
     private Set<Permission> permissions;
