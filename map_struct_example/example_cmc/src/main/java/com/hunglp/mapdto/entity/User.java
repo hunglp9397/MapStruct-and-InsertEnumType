@@ -38,6 +38,11 @@ public class User extends AbstractEntity{
     @OneToOne(mappedBy = "user")
     private Identity identity;
 
+    @OneToMany(mappedBy="user")
+    private Set<Order> orders = new HashSet<>();
+
+
+
 
 
 
