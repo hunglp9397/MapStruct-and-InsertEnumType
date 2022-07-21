@@ -36,7 +36,7 @@ public class User{
 //    private Permission permission;
 
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.PERSIST)
+    @OneToOne(mappedBy = "user", cascade = CascadeType.REMOVE)
     private Identity identity;
 
 

@@ -1,20 +1,21 @@
 # Overview
 1. Mapstruct example basic
 2. Insert DB Enum Type (Single value, multiple value)
+3. Mapstruct with relationship One to One
+4. Cascade : Persist, Remove
 
 
 # JSON example for POST:
 
 {
-    "name" : "ABC",
+    "name":"HUng",
     "permissions":["READ","WRITE"],
-    "gender":"MALE"
+    "gender":"MALE",
+    "identity":{
+        "idNumber":"112244"
+    }
 }
 
-
-# One to One:
-Save : set child reference in parent entity
-Set parent referene in child entity
 
 
 
