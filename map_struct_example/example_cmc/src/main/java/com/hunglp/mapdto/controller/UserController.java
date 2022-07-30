@@ -1,7 +1,9 @@
 package com.hunglp.mapdto.controller;
 
+import com.hunglp.mapdto.custom_annotation.AuthorizedFor;
 import com.hunglp.mapdto.dto.UserDto;
 import com.hunglp.mapdto.entity.Identity;
+import com.hunglp.mapdto.entity.Permission;
 import com.hunglp.mapdto.entity.User;
 import com.hunglp.mapdto.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +30,7 @@ public class UserController {
         return userService.getUserHasNameStartWith("H", pageable);
     }
 
+    @AuthorizedFor(permission = Permission.READ)
     @PutMapping("/update-address")
     public int updateAddressWhereUserHasNameStartWith(@RequestParam String s) {
         return userService.upperCaseFieldAddressWhereUserHasNameStartWith(s);
