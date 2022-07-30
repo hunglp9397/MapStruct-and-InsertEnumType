@@ -13,7 +13,7 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User{
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,12 +21,13 @@ public class User{
 
     private String name;
 
+    private String address;
 
     @Convert(converter = GenderEnumConverter.class)
     private Gender gender;
 
     @ElementCollection(targetClass = Permission.class, fetch = FetchType.EAGER)
-    @JoinTable(name = "user_permission", joinColumns  = @JoinColumn(name = "id"))
+    @JoinTable(name = "user_permission", joinColumns = @JoinColumn(name = "id"))
     @Convert(converter = PermissionEnumConverter.class)
     @Column(name = "permission")
     private Set<Permission> permissions;

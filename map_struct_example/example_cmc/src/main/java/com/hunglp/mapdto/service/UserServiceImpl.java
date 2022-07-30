@@ -49,4 +49,16 @@ public class UserServiceImpl implements UserService {
     }
 
 
+    @Override
+    public Page<UserDto> getUserHasNameStartWith(String s, Pageable pageable) {
+        return userRepository.customizedFindAllUser(s, pageable).map(userMapper::toDto);
+    }
+
+    @Override
+    @Transactional
+    public int upperCaseFieldAddressWhereUserHasNameStartWith(String s) {
+        return userRepository.updateUserSetAddressUppercase(s);
+    }
+
+
 }

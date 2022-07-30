@@ -21,8 +21,9 @@ import java.util.Set;
 public class UserDto implements Serializable {
     private Long id;
     private String name;
+    private String address;
     private Set<Permission> permissions;
-//    private Permission permission;
+    //    private Permission permission;
     private Gender gender;
     private IdentityDto identityDto;
 }
